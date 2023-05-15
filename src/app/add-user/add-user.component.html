@@ -1,0 +1,15 @@
+<div class="body">
+    <input type="text" placeholder="Name"
+    [value]="nameInputValue"
+    (input)="onName($event)" #name>
+
+    <!-- для ограничения количесва симоволов в Input можно указать maxLength -->
+    <textarea type="text" maxlength="50" placeholder="Status"
+    [value]="statusInputValue"
+    (input)="onStatus($event)" #status></textarea>
+    <input type="url" placeholder="Avatar URL"
+    [value]="imgInputValue"
+    (input)="onImg($event)" #img>
+    <button type="button"
+    (click)="addNewUser(name.value, status.value, img.value)">Add user</button>
+    </div>
